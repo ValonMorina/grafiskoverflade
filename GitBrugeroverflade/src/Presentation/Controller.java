@@ -49,7 +49,7 @@ public class Controller {
                 character.setY(character.getY()+10);
                 break;
 
-            case G:
+            case N:
                 pane.getScene().setRoot(Scene2Controller.getContent());
                 FXMLLoader.load(getClass().getResource("scene2.fxml"));
                 System.out.println("syste");
@@ -59,6 +59,8 @@ public class Controller {
             default:
                 break;
         }
+
+
 
         System.out.println("-----------------------------");
         System.out.println("X-værdi: " + character.getX());
