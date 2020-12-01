@@ -51,7 +51,7 @@ public class Controller {
                 break;
 
             case N:
-               Main.setRoot("scene2");
+               Main.setRoot("Bathroom");
                System.out.println("Scene loaded successfully");
                 break;
 
