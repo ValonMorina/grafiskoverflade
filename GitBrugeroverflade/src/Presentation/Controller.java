@@ -58,16 +58,6 @@ public class Controller implements Initializable {
                 }
                 break;
 
-            case N:
-               Main.setRoot("scene2");
-               System.out.println("Scene loaded successfully");
-                break;
-
-            case S:
-                Main.setRoot("det skal være river");
-                System.out.println("Scene loaded successfully");
-                break;
-
             default:
                 break;
         }
