@@ -43,16 +43,14 @@ public class Scene8Controller {
 
             case UP:
                 character.setY(character.getY()-10);
+                if(character.getY()<-30) {
+                    Main.setRoot("sample");
+                }
 
                 break;
 
             case DOWN:
                 character.setY(character.getY()+10);
-                break;
-
-            case N:
-                Main.setRoot("scene2");
-                System.out.println("Scene loaded successfully");
                 break;
 
             default:

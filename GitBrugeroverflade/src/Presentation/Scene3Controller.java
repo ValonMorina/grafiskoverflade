@@ -54,6 +54,8 @@ public class Scene3Controller
 
             case DOWN:
                 character.setY(character.getY()+10);
+                break;
+
 
             default:
                 break;

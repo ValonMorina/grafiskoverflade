@@ -34,8 +34,11 @@ public class Scene4Controller
     void keyPressed(KeyEvent event) throws InterruptedException, IOException {
 
         switch (event.getCode()) {
-            case RIGHT:
+            case RIGHT: //TownSquare
                 character.setX(character.getX()+10);
+                if (character.getX()>40) {
+                    Main.setRoot("sample");
+                }
                 break;
 
             case LEFT:

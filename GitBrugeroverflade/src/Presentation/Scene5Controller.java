@@ -39,6 +39,9 @@ public class Scene5Controller {
 
             case LEFT:
                 character.setX(character.getX()-10);
+                if(character.getX()<-50) {
+                    Main.setRoot("sample");
+                }
                 break;
 
             case UP:

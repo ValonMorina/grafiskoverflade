@@ -2,6 +2,7 @@ package Presentation;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -9,9 +10,11 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 
-public class Controller {
+public class Controller implements Initializable {
 
     @FXML
     private AnchorPane pane;
@@ -33,26 +36,36 @@ public class Controller {
     void keyPressed(KeyEvent event) throws InterruptedException, IOException {
 
         switch (event.getCode()) {
-            case RIGHT:
-                character.setX(character.getX()+10);
+            case RIGHT: //Village
+                character.setX(character.getX()+20);
+                if (character.getX()>390) {
+                Main.setRoot("scene5");
+            }
                 break;
 
-            case LEFT:
-                character.setX(character.getX()-10);
+            case LEFT:  //Brimhaven
+                character.setX(character.getX()-20);
+                if (character.getX()<-200) {
+                    Main.setRoot("scene4");
+                }
                 break;
 
-            case UP:
-                character.setY(character.getY()-10);
-
+            case UP:    //School
+                character.setY(character.getY()-20);
+                if(character.getY()<-330) {
+                    Main.setRoot("scene2");
+                }
+                //block house
+                if(character.getY()<-40 && character.getX()<100 && character.getX()>-100) {
+                    character.setY(-40);
+                }
                 break;
 
-            case DOWN:
-                character.setY(character.getY()+10);
-                break;
-
-            case N:
-               Main.setRoot("scene2");
-               System.out.println("Scene loaded successfully");
+            case DOWN:  //River
+                character.setY(character.getY()+20);
+                if(character.getY()>160) {
+                    Main.setRoot("scene8");
+                }
                 break;
 
             default:
@@ -64,6 +77,11 @@ public class Controller {
         System.out.println("-----------------------------");
         System.out.println("X-værdi: " + character.getX());
         System.out.println("Y værdi: " + character.getY());
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        pane.setFocusTraversable(true);
     }
 }
 
