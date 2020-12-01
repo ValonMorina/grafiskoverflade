@@ -25,10 +25,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../javafx-sdk-15.0.1/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/GitBrugeroverflade/src/Presentation" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Miniprojekt i OOP\grafiskoverflade\GitBrugeroverflade\src\Presentation" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -70,10 +76,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="222" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606389314910">
+    <state x="222" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606813757891">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
-    <state x="222" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.920@0.0.1536.920" timestamp="1606389314910" />
+    <state x="222" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.920@0.0.1536.920" timestamp="1606813757891" />
     <state x="548" y="164" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1606389207218">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
@@ -82,29 +88,33 @@
       <screen x="0" y="0" width="1536" height="920" />
     </state>
     <state x="497" y="249" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.920@0.0.1536.920" timestamp="1606389202012" />
-    <state x="472" y="201" key="FileChooserDialogImpl" timestamp="1606389141786">
+    <state x="498" y="206" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606815920039">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
-    <state x="472" y="201" key="FileChooserDialogImpl/0.0.1536.920@0.0.1536.920" timestamp="1606389141786" />
-    <state width="1491" height="241" key="GridCell.Tab.0.bottom" timestamp="1606390352346">
+    <state x="498" y="206" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.920@0.0.1536.920" timestamp="1606815920039" />
+    <state x="472" y="201" key="FileChooserDialogImpl" timestamp="1606814080423">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
-    <state width="1491" height="241" key="GridCell.Tab.0.bottom/0.0.1536.920@0.0.1536.920" timestamp="1606390352346" />
-    <state width="1491" height="241" key="GridCell.Tab.0.center" timestamp="1606390352345">
+    <state x="472" y="201" key="FileChooserDialogImpl/0.0.1536.920@0.0.1536.920" timestamp="1606814080423" />
+    <state width="1491" height="241" key="GridCell.Tab.0.bottom" timestamp="1606814159837">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
-    <state width="1491" height="241" key="GridCell.Tab.0.center/0.0.1536.920@0.0.1536.920" timestamp="1606390352345" />
-    <state width="1491" height="241" key="GridCell.Tab.0.left" timestamp="1606390352345">
+    <state width="1491" height="241" key="GridCell.Tab.0.bottom/0.0.1536.920@0.0.1536.920" timestamp="1606814159837" />
+    <state width="1491" height="241" key="GridCell.Tab.0.center" timestamp="1606814159837">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
-    <state width="1491" height="241" key="GridCell.Tab.0.left/0.0.1536.920@0.0.1536.920" timestamp="1606390352345" />
-    <state width="1491" height="241" key="GridCell.Tab.0.right" timestamp="1606390352346">
+    <state width="1491" height="241" key="GridCell.Tab.0.center/0.0.1536.920@0.0.1536.920" timestamp="1606814159837" />
+    <state width="1491" height="241" key="GridCell.Tab.0.left" timestamp="1606814159837">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
-    <state width="1491" height="241" key="GridCell.Tab.0.right/0.0.1536.920@0.0.1536.920" timestamp="1606390352346" />
-    <state x="248" y="34" key="SettingsEditor" timestamp="1606389146217">
+    <state width="1491" height="241" key="GridCell.Tab.0.left/0.0.1536.920@0.0.1536.920" timestamp="1606814159837" />
+    <state width="1491" height="241" key="GridCell.Tab.0.right" timestamp="1606814159837">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
-    <state x="248" y="34" key="SettingsEditor/0.0.1536.920@0.0.1536.920" timestamp="1606389146217" />
+    <state width="1491" height="241" key="GridCell.Tab.0.right/0.0.1536.920@0.0.1536.920" timestamp="1606814159837" />
+    <state x="248" y="34" key="SettingsEditor" timestamp="1606814084940">
+      <screen x="0" y="0" width="1536" height="920" />
+    </state>
+    <state x="248" y="34" key="SettingsEditor/0.0.1536.920@0.0.1536.920" timestamp="1606814084940" />
   </component>
 </project>
