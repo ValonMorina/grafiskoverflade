@@ -55,6 +55,11 @@ public class Controller {
                System.out.println("Scene loaded successfully");
                 break;
 
+            case S:
+                Main.setRoot("det skal være river");
+                System.out.println("Scene loaded successfully");
+                break;
+
             default:
                 break;
         }
