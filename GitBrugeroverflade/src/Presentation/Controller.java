@@ -38,6 +38,9 @@ public class Controller implements Initializable {
         switch (event.getCode()) {
             case RIGHT:
                 character.setX(character.getX()+10);
+                if (character.getX()>290) {
+                Main.setRoot("scene5");
+            }
                 break;
 
             case LEFT:
