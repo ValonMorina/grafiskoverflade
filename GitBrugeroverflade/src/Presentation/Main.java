@@ -14,9 +14,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        scene = new Scene(loadFXML("sample"));
         primaryStage.setTitle("World of Zuul");
-        primaryStage.setScene(new Scene(root, 600, 550));
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 
@@ -26,6 +26,7 @@ public class Main extends Application {
 
     private static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxml + ".fxml"));
+
         return fxmlLoader.load();
     }
 

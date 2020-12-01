@@ -51,10 +51,8 @@ public class Controller {
                 break;
 
             case N:
-                pane.getScene().setRoot(Scene2Controller.getContent());
-                FXMLLoader.load(getClass().getResource("scene2.fxml"));
-                System.out.println("syste");
-
+               Main.setRoot("scene2");
+               System.out.println("Scene loaded successfully");
                 break;
 
             default:
