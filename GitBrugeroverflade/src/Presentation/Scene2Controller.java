@@ -41,21 +41,23 @@ public class Scene2Controller {
 
         switch (event.getCode()) {
             case RIGHT:
-                character.setX(character.getX()+10);
+                character.setX(character.getX()+20);
                 break;
 
             case LEFT:
-                character.setX(character.getX()-10);
+                character.setX(character.getX()-20);
                 break;
 
             case UP:
-                character.setY(character.getY()-10);
+                character.setY(character.getY()-20);
 
                 break;
 
             case DOWN:
-                character.setY(character.getY()+10);
-
+                character.setY(character.getY()+20);
+                if(character.getY()>20) {
+                    Main.setRoot("sample");
+                }
             default:
                 break;
         }

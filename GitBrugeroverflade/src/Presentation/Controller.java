@@ -36,28 +36,35 @@ public class Controller implements Initializable {
     void keyPressed(KeyEvent event) throws InterruptedException, IOException {
 
         switch (event.getCode()) {
-            case RIGHT:
-                character.setX(character.getX()+10);
-                if (character.getX()>290) {
+            case RIGHT: //Village
+                character.setX(character.getX()+20);
+                if (character.getX()>390) {
                 Main.setRoot("scene5");
             }
                 break;
 
-            case LEFT:
-                character.setX(character.getX()-10);
-                break;
-
-            case UP:
-                character.setY(character.getY()-10);
-                if(character.getY()<-380) {
-                    Main.setRoot("scene2");
+            case LEFT:  //Brimhaven
+                character.setX(character.getX()-20);
+                if (character.getX()<-200) {
+                    Main.setRoot("scene4");
                 }
                 break;
 
-            case DOWN:
-                character.setY(character.getY()+10);
+            case UP:    //School
+                character.setY(character.getY()-20);
+                if(character.getY()<-330) {
+                    Main.setRoot("scene2");
+                }
+                //block house
+                if(character.getY()<-40 && character.getX()<100 && character.getX()>-100) {
+                    character.setY(-40);
+                }
+                break;
+
+            case DOWN:  //River
+                character.setY(character.getY()+20);
                 if(character.getY()>160) {
-                    Main.setRoot("SÆT NOGET IND HER");
+                    Main.setRoot("scene8");
                 }
                 break;
 
