@@ -32,6 +32,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Miniprojekt i OOP\grafiskoverflade\GitBrugeroverflade\src\Pictures_and_css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Miniprojekt i OOP\grafiskoverflade\GitBrugeroverflade\src\Presentation" />
     </key>
@@ -75,11 +78,18 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="222" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606813757891">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
     <state x="222" y="114" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.920@0.0.1536.920" timestamp="1606813757891" />
+    <state x="533" y="261" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606817566932">
+      <screen x="0" y="0" width="1536" height="920" />
+    </state>
+    <state x="533" y="261" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.920@0.0.1536.920" timestamp="1606817566932" />
     <state x="548" y="164" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1606389207218">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
@@ -96,22 +106,22 @@
       <screen x="0" y="0" width="1536" height="920" />
     </state>
     <state x="472" y="201" key="FileChooserDialogImpl/0.0.1536.920@0.0.1536.920" timestamp="1606814080423" />
-    <state width="1491" height="241" key="GridCell.Tab.0.bottom" timestamp="1606814159837">
+    <state width="1491" height="241" key="GridCell.Tab.0.bottom" timestamp="1606818052511">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
-    <state width="1491" height="241" key="GridCell.Tab.0.bottom/0.0.1536.920@0.0.1536.920" timestamp="1606814159837" />
-    <state width="1491" height="241" key="GridCell.Tab.0.center" timestamp="1606814159837">
+    <state width="1491" height="241" key="GridCell.Tab.0.bottom/0.0.1536.920@0.0.1536.920" timestamp="1606818052511" />
+    <state width="1491" height="241" key="GridCell.Tab.0.center" timestamp="1606818052511">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
-    <state width="1491" height="241" key="GridCell.Tab.0.center/0.0.1536.920@0.0.1536.920" timestamp="1606814159837" />
-    <state width="1491" height="241" key="GridCell.Tab.0.left" timestamp="1606814159837">
+    <state width="1491" height="241" key="GridCell.Tab.0.center/0.0.1536.920@0.0.1536.920" timestamp="1606818052511" />
+    <state width="1491" height="241" key="GridCell.Tab.0.left" timestamp="1606818052511">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
-    <state width="1491" height="241" key="GridCell.Tab.0.left/0.0.1536.920@0.0.1536.920" timestamp="1606814159837" />
-    <state width="1491" height="241" key="GridCell.Tab.0.right" timestamp="1606814159837">
+    <state width="1491" height="241" key="GridCell.Tab.0.left/0.0.1536.920@0.0.1536.920" timestamp="1606818052511" />
+    <state width="1491" height="241" key="GridCell.Tab.0.right" timestamp="1606818052511">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
-    <state width="1491" height="241" key="GridCell.Tab.0.right/0.0.1536.920@0.0.1536.920" timestamp="1606814159837" />
+    <state width="1491" height="241" key="GridCell.Tab.0.right/0.0.1536.920@0.0.1536.920" timestamp="1606818052511" />
     <state x="248" y="34" key="SettingsEditor" timestamp="1606814084940">
       <screen x="0" y="0" width="1536" height="920" />
     </state>
