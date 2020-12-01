@@ -16,6 +16,7 @@
       </ImageView>
    </children>
    <stylesheets>
+      <URL value="@../Pictures_and_css/school.css" />
       <URL value="@../Pictures_and_css/schooll.css" />
    </stylesheets>
 </AnchorPane>
