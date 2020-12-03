@@ -42,6 +42,9 @@ public class Scene2Controller {
         switch (event.getCode()) {
             case RIGHT:
                 character.setX(character.getX()+20);
+                if(character.getX()>200) {
+                    Main.setRoot("Scene6");
+                }
                 break;
 
             case LEFT:

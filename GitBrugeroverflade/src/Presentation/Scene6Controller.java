@@ -48,11 +48,9 @@ public class Scene6Controller {
 
             case DOWN:
                 character.setY(character.getY()+10);
-                break;
-
-            case N:
-                Main.setRoot("Bathroom");
-                System.out.println("Scene loaded successfully");
+                if (character.getY()>30) {
+                    Main.setRoot("scene5");
+                }
                 break;
 
             default:
