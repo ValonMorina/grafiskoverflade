@@ -43,16 +43,10 @@ public class Scene9Controller {
 
             case UP:
                 character.setY(character.getY()-10);
-
                 break;
 
             case DOWN:
                 character.setY(character.getY()+10);
-                break;
-
-            case N:
-                Main.setRoot("scene2");
-                System.out.println("Scene loaded successfully");
                 break;
 
             default:

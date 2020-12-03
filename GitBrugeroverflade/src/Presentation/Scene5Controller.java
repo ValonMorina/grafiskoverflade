@@ -46,7 +46,9 @@ public class Scene5Controller {
 
             case UP:
                 character.setY(character.getY()-10);
-
+                if(character.getY()<-150) {
+                    Main.setRoot("Scene6");
+                }
                 break;
 
             case DOWN:
