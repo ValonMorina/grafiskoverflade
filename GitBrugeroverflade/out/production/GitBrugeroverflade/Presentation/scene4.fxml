@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="pane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.Scene4Controller">
-    <children>
-      <ImageView fx:id="character" fitHeight="88.0" fitWidth="42.0" focusTraversable="true" layoutX="544.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+<AnchorPane fx:id="pane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="550.0" prefWidth="600.0" stylesheets="@../Pictures_and_css/brimhaventownv1.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.Scene4Controller">
+   <children>
+      <ImageView fx:id="character" fitHeight="50.0" fitWidth="182.0" focusTraversable="true" layoutX="547.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/redcharacterr.png" />
          </image>
       </ImageView>
-    </children>
-   <stylesheets>
-      <URL value="@../Pictures_and_css/brimhaventownv1.css" />
-      <URL value="@../Pictures_and_css/brimhaventownv1.css" />
-   </stylesheets>
+      <Label fx:id="label" layoutX="105.0" layoutY="37.0" text="Label" />
+   </children>
 </AnchorPane>
