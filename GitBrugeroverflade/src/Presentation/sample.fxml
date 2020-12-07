@@ -20,7 +20,6 @@
         </items>
       </MenuButton>
       <TextArea fx:id="textbox" focusTraversable="false" layoutX="160.0" layoutY="413.0" prefHeight="38.0" prefWidth="193.0" visible="false" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="50.0" fitWidth="52.0" layoutX="414.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/pickaxe.png" />
