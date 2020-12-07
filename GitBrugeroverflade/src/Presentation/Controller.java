@@ -116,6 +116,8 @@ public class Controller implements Initializable {
             KeyFrame keyframe = new KeyFrame(Duration.seconds(3),actionEvent1 -> textbox.setVisible(false)); // With Lambda you can use methods as arguments
             Timeline timeline = new Timeline(keyframe);
             timeline.play();
+        } else if (actionEvent.getSource() == takebutton) {
+
         }
     }
 }
