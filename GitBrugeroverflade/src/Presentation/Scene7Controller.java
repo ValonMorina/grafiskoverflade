@@ -34,37 +34,36 @@ public class Scene7Controller {
 
         switch (event.getCode()) {
             case RIGHT:
-                character.setX(character.getX()+10);
+                character.setX(character.getX() + 10);
                 break;
 
             case LEFT:
-                character.setX(character.getX()-10);
+                character.setX(character.getX() - 10);
+                if (character.getX() < -470) {
+                    character.setX(-470);
+                }
                 break;
 
             case UP:
-                character.setY(character.getY()-10);
-
+                character.setY(character.getY() - 10);
+                if (character.getY() < -130) {
+                    Main.setRoot("scene4");
+                }
                 break;
 
             case DOWN:
-                character.setY(character.getY()+10);
-                break;
-
-            case N:
-                Main.setRoot("scene2");
-                System.out.println("Scene loaded successfully");
+                character.setY(character.getY() + 10);
+                if (character.getY() > 140) {
+                    character.setY(140);
+                }
                 break;
 
             default:
                 break;
         }
-
-
-
-        System.out.println("-----------------------------");
-        System.out.println("X-værdi: " + character.getX());
-        System.out.println("Y værdi: " + character.getY());
+                System.out.println("-----------------------------");
+                System.out.println("X-værdi: " + character.getX());
+                System.out.println("Y værdi: " + character.getY());
+        }
     }
-}
-
 

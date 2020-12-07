@@ -35,13 +35,16 @@ public class Scene8Controller {
         switch (event.getCode()) {
             case RIGHT:
                 character.setX(character.getX()+10);
-                if(character.getX()>390) {
+                if(character.getX()>20) {
                     Main.setRoot("scene9");
                 }
                 break;
 
             case LEFT:
                 character.setX(character.getX()-10);
+                if(character.getX()<-570) {
+                    Main.setRoot("scene7");
+                }
                 break;
 
             case UP:

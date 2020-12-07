@@ -2,7 +2,7 @@ package Domain;
 
 public interface IGame {
 
-    public void dropItem();
+    public void takeItem();
 
 
     }

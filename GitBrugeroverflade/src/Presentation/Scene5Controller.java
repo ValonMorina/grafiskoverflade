@@ -53,6 +53,9 @@ public class Scene5Controller {
 
             case DOWN:
                 character.setY(character.getY()+10);
+                if(character.getY()>380) {
+                    Main.setRoot("scene9");
+                }
                 break;
 
             case N:

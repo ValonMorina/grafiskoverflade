@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,6 +11,5 @@
             <Image url="@../Pictures_and_css/redcharacterr.png" />
          </image>
       </ImageView>
-      <Label fx:id="label" layoutX="105.0" layoutY="37.0" text="Label" />
    </children>
 </AnchorPane>
