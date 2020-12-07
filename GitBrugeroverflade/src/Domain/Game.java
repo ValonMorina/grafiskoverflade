@@ -151,7 +151,7 @@ public class Game {
         }
         //If commandWord is inventory the program executes the method printInventory()
         else if (commandWord == CommandWord.INVENTORY) {
-            printInventory();
+            printInventory(new Command(CommandWord.INVENTORY, "inventory"));
         }
         else if (commandWord == CommandWord.TAKE) {
             takeItem(command);
@@ -216,13 +216,13 @@ public class Game {
     }
 
     //This method is executed when commandWord inventory is written by user
-    private void printInventory() {
+    private void printInventory(Command inventory) {
         String output = ""; //these "" initializes the variable to be empty
         //Runs through the arrayList named inventory and prints every item in the list
-        for (int i = 0; i < inventory.size(); i++) {
+        for (int i = 0; i < this.inventory.size(); i++) {
             //checks inventory for the current value of i, if something is stored there it is added to the String
             //variable 'output' and using the getDescription() method it is turned into a String
-            output += inventory.get(i).getDescription() + " "; //" " at the end leaves a space between printed items
+            output += this.inventory.get(i).getDescription() + " "; //" " at the end leaves a space between printed items
         }
         System.out.println("Your inventory contains: ");
         //if statement checks if inventory is empty by checking whether or not the value of 'output' has been changed
@@ -264,6 +264,7 @@ public class Game {
             System.out.println("Drop what?");
             return;
         }
+
         //Stores second command word in a String named item
         String item = command.getSecondWord();
 
@@ -293,7 +294,14 @@ public class Game {
         }
     }
 
-    //Method talk prints messages to the user, the message depends on currentRoom
+    private void dropItemGui() {
+        dropItem(new Command(CommandWord.DROP,"drop"));
+    }
+
+
+
+
+        //Method talk prints messages to the user, the message depends on currentRoom
     private void talk() {
         if (currentRoom == townSquare)  {
             System.out.println("Hi welcome to the game!");
