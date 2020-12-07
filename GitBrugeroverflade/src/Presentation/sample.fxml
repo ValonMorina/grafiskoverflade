@@ -13,6 +13,7 @@
    <children>
       <Button focusTraversable="false" layoutX="14.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#mouseClicked" text="Inventory" />
       <ListView fx:id="ListView" layoutX="400.0" layoutY="350.0" prefHeight="200.0" prefWidth="200.0" visible="false" />
+      <Button fx:id="mapbutton" focusTraversable="false" layoutX="93.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#mouseClickedMap" text="Map" />
       <MenuButton fx:id="menuButton" focusTraversable="false" layoutX="412.0" layoutY="278.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="52.0">
         <items>
           <MenuItem fx:id="takebutton" mnemonicParsing="false" onAction="#handler" text="Take" />
@@ -28,6 +29,12 @@
       <ImageView fx:id="character" fitHeight="50.0" fitWidth="182.0" focusTraversable="true" layoutX="188.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/redcharacterr.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="mapImageView" fitHeight="352.0" fitWidth="366.0" focusTraversable="true" layoutX="188.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Pictures_and_css/map.png" />
          </image>
       </ImageView>
    </children>

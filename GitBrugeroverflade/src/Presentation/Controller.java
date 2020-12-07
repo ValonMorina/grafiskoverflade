@@ -26,6 +26,7 @@ public class Controller implements Initializable {
     public MenuItem inspectbutton;
     public TextArea textbox;
     public MenuButton menuButton;
+    public ImageView mapImageView;
 
     @FXML
     private AnchorPane pane;
@@ -38,10 +39,6 @@ public class Controller implements Initializable {
 
     @FXML
     private Label label;
-
-    @FXML
-    private Button nailbutton;
-
 
     @FXML
     void keyPressed(KeyEvent event) throws InterruptedException, IOException {
@@ -80,14 +77,14 @@ public class Controller implements Initializable {
                 break;
 
             case ENTER:
-                menuButton.fire();
+                if(character.getX() >= 200 && character.getX() < 280 ) {
+                    menuButton.fire();
+                }
                 break;
 
             default:
                 break;
         }
-
-
 
         System.out.println("-----------------------------");
         System.out.println("X-værdi: " + character.getX());
@@ -120,4 +117,13 @@ public class Controller implements Initializable {
 
         }
     }
-}
+
+    public void mouseClickedMap(MouseEvent mouseEvent) {
+        if (!mapImageView.isVisible()) {
+            mapImageView.setVisible(true);
+
+        } else if (mapImageView.isVisible()) {
+            mapImageView.setVisible(false);
+        }
+    }
+    }

@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="600.0" stylesheets="@../Pictures_and_css/springv2.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.Scene7Controller">
+<AnchorPane fx:id="pane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="600.0" stylesheets="@../Pictures_and_css/Quarry.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.Scene7Controller">
    <children>
-      <ImageView fx:id="character" fitHeight="50.0" fitWidth="182.0" layoutX="80.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="character" fitHeight="63.0" fitWidth="60.0" focusTraversable="true" layoutX="508.0" layoutY="182.0" onKeyPressed="#keyPressed" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/redcharacterr.png" />
          </image>
       </ImageView>
-      <Button fx:id="button" layoutX="557.0" layoutY="1.0" mnemonicParsing="false" onKeyPressed="#keyPressed" prefHeight="27.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
-      <Label fx:id="label" layoutX="105.0" layoutY="37.0" text="Label" />
    </children>
 </AnchorPane>

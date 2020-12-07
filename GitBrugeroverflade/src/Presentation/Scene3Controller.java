@@ -41,6 +41,9 @@ public class Scene3Controller
         switch (event.getCode()) {
             case RIGHT:
                 character.setX(character.getX()+10);
+                if (character.getX()>210) {
+                    Main.setRoot("scene2");
+                }
                 break;
 
             case LEFT:
@@ -54,6 +57,9 @@ public class Scene3Controller
 
             case DOWN:
                 character.setY(character.getY()+10);
+                if (character.getY()>20) {
+                    Main.setRoot("scene4");
+                }
                 break;
 
 

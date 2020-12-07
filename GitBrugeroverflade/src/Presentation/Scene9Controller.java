@@ -39,10 +39,16 @@ public class Scene9Controller {
 
             case LEFT:
                 character.setX(character.getX()-10);
+                if(character.getX()<-30) {
+                    Main.setRoot("scene8");
+                }
                 break;
 
             case UP:
                 character.setY(character.getY()-10);
+                if(character.getY()<-320) {
+                    Main.setRoot("scene5");
+                }
                 break;
 
             case DOWN:
