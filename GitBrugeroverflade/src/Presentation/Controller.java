@@ -1,7 +1,11 @@
 package Presentation;
 
+import Domain.IGame;
+import Domain.Item;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -16,6 +20,7 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 
@@ -27,6 +32,8 @@ public class Controller implements Initializable {
     public TextArea textbox;
     public MenuButton menuButton;
     public ImageView mapImageView;
+    public ImageView pickaxe;
+    public Button dropButton;
 
     @FXML
     private AnchorPane pane;
@@ -41,43 +48,48 @@ public class Controller implements Initializable {
     private Label label;
 
     @FXML
+    private Button btnRemove;
+    private ObservableList<String> itemsInventory;
+
+
+    @FXML
     void keyPressed(KeyEvent event) throws InterruptedException, IOException {
 
         switch (event.getCode()) {
             case RIGHT: //Village
-                character.setX(character.getX()+20);
-                if (character.getX()>390) {
-                Main.setRoot("scene5");
-            }
+                character.setX(character.getX() + 20);
+                if (character.getX() > 390) {
+                    Main.setRoot("scene5");
+                }
                 break;
 
             case LEFT:  //Brimhaven
-                character.setX(character.getX()-20);
-                if (character.getX()<-200) {
+                character.setX(character.getX() - 20);
+                if (character.getX() < -200) {
                     Main.setRoot("scene4");
                 }
                 break;
 
             case UP:    //School
-                character.setY(character.getY()-20);
-                if(character.getY()<-330) {
+                character.setY(character.getY() - 20);
+                if (character.getY() < -330) {
                     Main.setRoot("scene2");
                 }
                 //block house
-                if(character.getY()<-40 && character.getX()<100 && character.getX()>-100) {
+                if (character.getY() < -40 && character.getX() < 100 && character.getX() > -100) {
                     character.setY(-40);
                 }
                 break;
 
             case DOWN:  //River
-                character.setY(character.getY()+20);
-                if(character.getY()>160) {
+                character.setY(character.getY() + 20);
+                if (character.getY() > 160) {
                     Main.setRoot("scene8");
                 }
                 break;
 
             case ENTER:
-                if(character.getX() >= 200 && character.getX() < 280 ) {
+                if (character.getX() >= 200 && character.getX() < 280 && !itemsInventory.contains("pickaxe")) {
                     menuButton.fire();
                 }
                 break;
@@ -94,29 +106,38 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         pane.setFocusTraversable(true);
+        itemsInventory = FXCollections.observableArrayList();
+        ListView.setItems(itemsInventory);
     }
 
     public void mouseClicked(MouseEvent mouseEvent) {
+
         if (!ListView.isVisible()) {
             ListView.setVisible(true);
+            dropButton.setVisible(true);
 
         } else if (ListView.isVisible()) {
             ListView.setVisible(false);
+            dropButton.setVisible(false);
         }
     }
-
 
     public void handler(ActionEvent actionEvent) {
-        if(actionEvent.getSource() == inspectbutton) {
+        if (actionEvent.getSource() == inspectbutton) {
             textbox.setVisible(true);
             textbox.setText("This is a pickaxe");
-            KeyFrame keyframe = new KeyFrame(Duration.seconds(3),actionEvent1 -> textbox.setVisible(false)); // With Lambda you can use methods as arguments
+            KeyFrame keyframe = new KeyFrame(Duration.seconds(3), actionEvent1 -> textbox.setVisible(false)); // With Lambda you can use methods as arguments
             Timeline timeline = new Timeline(keyframe);
             timeline.play();
+
         } else if (actionEvent.getSource() == takebutton) {
+            itemsInventory.add("pickaxe");
+            pickaxe.setVisible(false);
+
 
         }
     }
+
 
     public void mouseClickedMap(MouseEvent mouseEvent) {
         if (!mapImageView.isVisible()) {
@@ -126,4 +147,12 @@ public class Controller implements Initializable {
             mapImageView.setVisible(false);
         }
     }
+
+
+    public void removeItem(MouseEvent mouseEvent) {
+        itemsInventory.remove("pickaxe");
+
+        pickaxe.setVisible(true);
+    }
+
     }
