@@ -107,7 +107,11 @@ public class Controller implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         pane.setFocusTraversable(true);
         itemsInventory = FXCollections.observableArrayList();
+        itemsInventory.addAll(Main.game.getInventory());
         ListView.setItems(itemsInventory);
+        if (itemsInventory.contains("pickaxe")) {
+            pickaxe.setVisible(false);
+        }
     }
 
     public void mouseClicked(MouseEvent mouseEvent) {
@@ -131,6 +135,7 @@ public class Controller implements Initializable {
             timeline.play();
 
         } else if (actionEvent.getSource() == takebutton) {
+            Main.game.addInventory("pickaxe");
             itemsInventory.add("pickaxe");
             pickaxe.setVisible(false);
 
@@ -150,9 +155,13 @@ public class Controller implements Initializable {
 
 
     public void removeItem(MouseEvent mouseEvent) {
-        itemsInventory.remove("pickaxe");
+        String item = (String) ListView.getSelectionModel().getSelectedItem();
+        Main.game.removeInventory(item);
+        itemsInventory.remove(item);
 
-        pickaxe.setVisible(true);
-    }
+        if (!itemsInventory.contains("pickaxe")) {
+            pickaxe.setVisible(true);
+        }
 
     }
+}

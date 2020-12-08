@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane fx:id="pane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="550.0" prefWidth="600.0" stylesheets="@../Pictures_and_css/schoolv1.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.Scene2Controller">
    <children>
+      <Button focusTraversable="false" layoutX="23.0" layoutY="515.0" mnemonicParsing="false" onMouseClicked="#mouseClicked" text="Inventory" />
+      <ListView fx:id="ListView" layoutX="439.0" layoutY="386.0" prefHeight="164.0" prefWidth="161.0" visible="false" />
+      <Button fx:id="mapbutton" focusTraversable="false" layoutX="112.0" layoutY="515.0" mnemonicParsing="false" onMouseClicked="#mouseClickedMap" text="Map" />
+      <ImageView fx:id="papir" fitHeight="44.0" fitWidth="52.0" layoutX="391.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures_and_css/papirv3.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="dropButton" focusTraversable="false" layoutX="496.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#removeItem" text="DROP" visible="false" />
+      <MenuButton fx:id="menuButton" focusTraversable="false" layoutX="383.0" layoutY="136.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.0" visible="false">
+        <items>
+          <MenuItem fx:id="takebutton" mnemonicParsing="false" onAction="#handler" text="Take" />
+          <MenuItem fx:id="inspectbutton" mnemonicParsing="false" onAction="#handler" text="Inspect" />
+        </items>
+      </MenuButton>
+      <TextArea fx:id="textbox" focusTraversable="false" layoutX="228.0" layoutY="77.0" prefHeight="54.0" prefWidth="162.0" visible="false" />
       <ImageView fx:id="character" fitHeight="54.0" fitWidth="42.0" focusTraversable="true" layoutX="387.0" layoutY="488.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/redcharacterr.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mapImageView" fitHeight="248.0" fitWidth="305.0" layoutX="239.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Pictures_and_css/map.png" />
          </image>
       </ImageView>
    </children>
