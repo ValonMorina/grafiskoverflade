@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -10,10 +11,11 @@
    <children>
       <MenuButton fx:id="menuButton2" layoutX="485.0" layoutY="273.0" mnemonicParsing="false" text="MenuButton" visible="false">
         <items>
-          <MenuItem fx:id="talkButton" mnemonicParsing="false" text="Talk" />
+          <MenuItem fx:id="talkButton" mnemonicParsing="false" onAction="#handler" text="Talk" />
           <MenuItem fx:id="buildButton" mnemonicParsing="false" text="Build" />
         </items>
       </MenuButton>
+      <TextArea fx:id="textbox" layoutX="201.0" layoutY="406.0" prefHeight="43.0" prefWidth="198.0" visible="false" />
       <ImageView fitHeight="68.0" fitWidth="62.0" layoutX="507.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/Jennifer2.png" />
