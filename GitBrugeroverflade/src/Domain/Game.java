@@ -87,11 +87,11 @@ public class Game implements IGame{
 
         //Room inventory, sets items in the rooms, these can be picked up by the user
         forest.setRoomItem(new Item("wood"));
-        quarry.setRoomItem(new Item("pickaxe"));
+        quarry.setRoomItem(new Item("pickaxe"));    //done
         quarry.setRoomItem(new Item("rocks"));
         quarry.setRoomItem(new Item("iron"));
         quarry.setRoomItem(new Item("concrete"));
-        village.setRoomItem(new Item("paper"));
+        village.setRoomItem(new Item("paper"));      //done
         townSquare.setRoomItem(new Item("nail"));
         brimhavenTown.setRoomItem(new Item("pens"));
         brimhavenTown.setRoomItem(new Item("pipes"));
