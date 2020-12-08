@@ -4,6 +4,7 @@ import Domain.IGame;
 import Domain.Item;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -48,7 +49,8 @@ public class Controller implements Initializable {
 
     @FXML
     private Button btnRemove;
-    private ObservableList<Item> itemsInventory;
+    private ObservableList<String> itemsInventory;
+
 
     @FXML
     void keyPressed(KeyEvent event) throws InterruptedException, IOException {
@@ -87,7 +89,7 @@ public class Controller implements Initializable {
                 break;
 
             case ENTER:
-                if (character.getX() >= 200 && character.getX() < 280) {
+                if (character.getX() >= 200 && character.getX() < 280 && !itemsInventory.contains("pickaxe")) {
                     menuButton.fire();
                 }
                 break;
@@ -104,6 +106,8 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         pane.setFocusTraversable(true);
+        itemsInventory = FXCollections.observableArrayList();
+        ListView.setItems(itemsInventory);
     }
 
     public void mouseClicked(MouseEvent mouseEvent) {
@@ -127,8 +131,9 @@ public class Controller implements Initializable {
             timeline.play();
 
         } else if (actionEvent.getSource() == takebutton) {
-            ListView.getItems().add("Pickaxe");
+            itemsInventory.add("pickaxe");
             pickaxe.setVisible(false);
+
 
         }
     }
@@ -145,7 +150,7 @@ public class Controller implements Initializable {
 
 
     public void removeItem(MouseEvent mouseEvent) {
-        ListView.getItems().remove("Pickaxe");
+        itemsInventory.remove("pickaxe");
 
         pickaxe.setVisible(true);
     }
