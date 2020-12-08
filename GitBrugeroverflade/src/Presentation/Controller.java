@@ -1,15 +1,11 @@
 package Presentation;
 
-import Domain.IGame;
-import Domain.Item;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
@@ -20,7 +16,6 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 
@@ -34,6 +29,7 @@ public class Controller implements Initializable {
     public ImageView mapImageView;
     public ImageView pickaxe;
     public Button dropButton;
+    public Button clickArea;
 
     @FXML
     private AnchorPane pane;
@@ -89,9 +85,19 @@ public class Controller implements Initializable {
                 break;
 
             case ENTER:
-                if (character.getX() >= 200 && character.getX() < 280 && !itemsInventory.contains("pickaxe")) {
-                    menuButton.fire();
+
+                if(pickaxe.getX()+220==character.getX() ) {
+                    if(pickaxe.getY()-20==character.getY()) {
+
+                        if(!itemsInventory.contains("pickaxe")) {
+                            //opens menu
+                            menuButton.fire();
+                        }
+                    }
                 }
+
+
+
                 break;
 
             default:
@@ -110,7 +116,7 @@ public class Controller implements Initializable {
         ListView.setItems(itemsInventory);
     }
 
-    public void mouseClicked(MouseEvent mouseEvent) {
+    public void mouseClickedInventory(MouseEvent mouseEvent) {
 
         if (!ListView.isVisible()) {
             ListView.setVisible(true);
@@ -150,9 +156,35 @@ public class Controller implements Initializable {
 
 
     public void removeItem(MouseEvent mouseEvent) {
+        moveItem("pickaxe");
         itemsInventory.remove("pickaxe");
-
         pickaxe.setVisible(true);
     }
 
+    private void moveItem(String itemName) {
+        //identify item
+        if (itemName == "pickaxe") {
+
+            //check if item is in inventory
+            for (String item: itemsInventory) {
+                if (item == "pickaxe") {
+                    System.out.println("menuXY: "+menuButton.getLayoutX()+","+menuButton.getLayoutY());
+                    System.out.println("picXY: "+pickaxe.getLayoutX()+","+pickaxe.getLayoutY());
+                    //move item to player location
+                    // set item X to player X coordinate
+                    pickaxe.setX(character.getX()-200);
+                    // set item Y to player Y coordnate
+                    pickaxe.setY(character.getY()+40);
+                    //move menu to pixage location
+                    menuButton.setLayoutX(character.getX()+(412-240));
+                    menuButton.setLayoutY(character.getY()+278+40);
+
+                    System.out.println("menuXY: "+menuButton.getLayoutX()+","+menuButton.getLayoutY());
+                    System.out.println("picXY: "+pickaxe.getLayoutX()+","+pickaxe.getLayoutY());
+                    break;
+                }
+            }
+        }
     }
+
+}

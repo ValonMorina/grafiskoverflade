@@ -11,7 +11,7 @@
 
 <AnchorPane fx:id="pane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="550.0" prefWidth="600.0" stylesheets="@../Pictures_and_css/TownSquare.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.Controller">
    <children>
-      <Button focusTraversable="false" layoutX="14.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#mouseClicked" text="Inventory" />
+      <Button focusTraversable="false" layoutX="14.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#mouseClickedInventory" text="Inventory" />
       <ListView fx:id="ListView" layoutX="400.0" layoutY="350.0" prefHeight="200.0" prefWidth="200.0" visible="false" />
       <Button fx:id="mapbutton" focusTraversable="false" layoutX="93.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#mouseClickedMap" text="Map" />
       <ImageView fx:id="pickaxe" fitHeight="50.0" fitWidth="40.0" layoutX="423.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
