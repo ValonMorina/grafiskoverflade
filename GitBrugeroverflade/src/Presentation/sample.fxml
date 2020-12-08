@@ -19,6 +19,7 @@
             <Image url="@../Pictures_and_css/pickaxev4.png" />
          </image>
       </ImageView>
+      <Button fx:id="dropButton" focusTraversable="false" layoutX="476.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#removeItem" text="DROP" visible="false" />
       <MenuButton fx:id="menuButton" focusTraversable="false" layoutX="412.0" layoutY="278.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="52.0" visible="false">
         <items>
           <MenuItem fx:id="takebutton" mnemonicParsing="false" onAction="#handler" text="Take" />
@@ -37,6 +38,5 @@
             <Image url="@../Pictures_and_css/map.png" />
          </image>
       </ImageView>
-      <Button fx:id="dropButton" focusTraversable="false" layoutX="476.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#mouseClicked" text="DROP" visible="false" />
    </children>
 </AnchorPane>
