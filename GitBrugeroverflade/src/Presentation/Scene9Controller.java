@@ -88,8 +88,12 @@ public class Scene9Controller implements Initializable {
     public void handler(ActionEvent actionEvent) {
         if (actionEvent.getSource() == talkButton) {
             textbox.setVisible(true);
-            textbox.setText("My name is Jennifer");
-            KeyFrame keyframe = new KeyFrame(Duration.seconds(3), actionEvent1 -> textbox.setVisible(false)); // With Lambda you can use methods as arguments
+            textbox.setText("Hi! I'm Jennifer, nice to meet you!" +
+                    "\nI am trying to build spring protection, for this beautiful spring to make the water clean." +
+                    "\nCan you get these items for me? Pickaxe, wood and pipes. " +
+                    "\nCome back when you are ready to 'build' the spring");
+
+            KeyFrame keyframe = new KeyFrame(Duration.seconds(30), actionEvent1 -> textbox.setVisible(false)); // With Lambda you can use methods as arguments
             Timeline timeline = new Timeline(keyframe);
             timeline.play();
         }
