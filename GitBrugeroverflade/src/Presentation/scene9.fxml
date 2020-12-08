@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane fx:id="pane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="550.0" prefWidth="600.0" stylesheets="@../Pictures_and_css/springv3.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.Scene9Controller">
    <children>
+      <MenuButton fx:id="menuButton2" layoutX="485.0" layoutY="273.0" mnemonicParsing="false" text="MenuButton" visible="false">
+        <items>
+          <MenuItem fx:id="talkButton" mnemonicParsing="false" text="Talk" />
+          <MenuItem fx:id="buildButton" mnemonicParsing="false" text="Build" />
+        </items>
+      </MenuButton>
+      <ImageView fitHeight="68.0" fitWidth="62.0" layoutX="507.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures_and_css/Jennifer2.png" />
+         </image>
+      </ImageView>
       <ImageView fx:id="character" fitHeight="63.0" fitWidth="46.0" focusTraversable="true" layoutX="14.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/redcharacterr.png" />
