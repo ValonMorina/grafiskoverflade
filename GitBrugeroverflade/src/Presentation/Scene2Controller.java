@@ -100,6 +100,7 @@ public class Scene2Controller implements IController, Initializable {
 
     @Override
     public void mouseClicked(MouseEvent mouseEvent) {
+
         if (!ListView.isVisible()) {
             ListView.setVisible(true);
             dropButton.setVisible(true);
@@ -120,13 +121,13 @@ public class Scene2Controller implements IController, Initializable {
             timeline.play();
 
         } else if (actionEvent.getSource() == takebutton) {
+            Main.game.addInventory("papir");
             itemsInventory.add("papir");
             papir.setVisible(false);
 
 
         }
     }
-
     @Override
     public void mouseClickedMap(MouseEvent mouseEvent) {
         if (!mapImageView.isVisible()) {
@@ -139,6 +140,13 @@ public class Scene2Controller implements IController, Initializable {
 
     @Override
     public void removeItem(MouseEvent mouseEvent) {
+        String item = (String) ListView.getSelectionModel().getSelectedItem();
+        Main.game.removeInventory(item);
+        itemsInventory.remove(item);
+
+        if (!itemsInventory.contains("papir")) {
+            papir.setVisible(true);
+        }
 
     }
 }
