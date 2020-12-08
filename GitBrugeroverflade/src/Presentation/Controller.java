@@ -27,6 +27,7 @@ public class Controller implements Initializable {
     public TextArea textbox;
     public MenuButton menuButton;
     public ImageView mapImageView;
+    public ImageView pickaxe;
 
     @FXML
     private AnchorPane pane;
@@ -103,8 +104,8 @@ public class Controller implements Initializable {
         } else if (ListView.isVisible()) {
             ListView.setVisible(false);
         }
-    }
 
+    }
 
     public void handler(ActionEvent actionEvent) {
         if(actionEvent.getSource() == inspectbutton) {
@@ -113,10 +114,14 @@ public class Controller implements Initializable {
             KeyFrame keyframe = new KeyFrame(Duration.seconds(3),actionEvent1 -> textbox.setVisible(false)); // With Lambda you can use methods as arguments
             Timeline timeline = new Timeline(keyframe);
             timeline.play();
-        } else if (actionEvent.getSource() == takebutton) {
 
+        } else if (actionEvent.getSource() == takebutton) {
+            ListView.getItems().add("Pickaxe");
+            pickaxe.setVisible(false);
+
+            }
         }
-    }
+
 
     public void mouseClickedMap(MouseEvent mouseEvent) {
         if (!mapImageView.isVisible()) {
