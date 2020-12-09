@@ -10,7 +10,7 @@
 
 <AnchorPane fx:id="pane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="623.0" stylesheets="@../Pictures_and_css/riverv3.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.Scene8Controller">
    <children>
-      <ImageView fx:id="character" fitHeight="54.0" fitWidth="28.0" focusTraversable="true" layoutX="558.0" layoutY="102.0" onKeyPressed="#keyPressed" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="character" fitHeight="54.0" fitWidth="28.0" focusTraversable="true" layoutX="298.0" layoutY="284.0" onKeyPressed="#keyPressed" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/redcharacterr.png" />
          </image>
