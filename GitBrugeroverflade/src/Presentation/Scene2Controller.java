@@ -64,6 +64,9 @@ public class Scene2Controller implements IController, Initializable {
 
             case LEFT:
                 character.setX(character.getX()-20);
+                if(character.getX()<-400) {
+                    Main.setRoot("scene3");
+                }
                 break;
 
             case UP:

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
@@ -9,14 +11,14 @@
 
 <AnchorPane fx:id="pane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="550.0" prefWidth="600.0" stylesheets="@../Pictures_and_css/springv3.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.Scene9Controller">
    <children>
-      <MenuButton fx:id="menuButton2" layoutX="485.0" layoutY="273.0" mnemonicParsing="false" text="MenuButton" visible="false">
+      <MenuButton fx:id="menuButton" focusTraversable="false" layoutX="485.0" layoutY="273.0" mnemonicParsing="false" text="MenuButton" visible="false">
         <items>
           <MenuItem fx:id="talkButton" mnemonicParsing="false" onAction="#handler" text="Talk" />
-          <MenuItem fx:id="buildButton" mnemonicParsing="false" text="Build" />
+          <MenuItem fx:id="buildButton" mnemonicParsing="false" onAction="#handler" text="Build" />
         </items>
       </MenuButton>
       <TextArea fx:id="textbox" focusTraversable="false" layoutX="67.0" layoutY="38.0" prefHeight="91.0" prefWidth="496.0" visible="false" />
-      <ImageView fitHeight="68.0" fitWidth="62.0" layoutX="507.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="jeniffer" fitHeight="68.0" fitWidth="62.0" layoutX="507.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/Jennifer2.png" />
          </image>
@@ -26,5 +28,20 @@
             <Image url="@../Pictures_and_css/redcharacterr.png" />
          </image>
       </ImageView>
+      <Button focusTraversable="false" layoutX="24.0" layoutY="522.0" mnemonicParsing="false" onMouseClicked="#mouseClicked" text="Inventory" />
+      <ListView fx:id="ListView" layoutX="459.0" layoutY="406.0" prefHeight="164.0" prefWidth="161.0" visible="false" />
+      <Button fx:id="mapbutton" focusTraversable="false" layoutX="106.0" layoutY="522.0" mnemonicParsing="false" onMouseClicked="#mouseClickedMap" text="Map" />
+      <Button fx:id="dropButton" focusTraversable="false" layoutX="516.0" layoutY="530.0" mnemonicParsing="false" onMouseClicked="#removeItem" text="DROP" visible="false" />
+      <ImageView fx:id="mapImageView" fitHeight="248.0" fitWidth="305.0" layoutX="259.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Pictures_and_css/map.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="springprotection" fitHeight="191.0" fitWidth="423.0" layoutX="192.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Pictures_and_css/springprotection.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="nobuild" focusTraversable="false" layoutX="344.0" layoutY="213.0" prefHeight="26.0" prefWidth="183.0" text="You need more items!" visible="false" />
    </children>
 </AnchorPane>
