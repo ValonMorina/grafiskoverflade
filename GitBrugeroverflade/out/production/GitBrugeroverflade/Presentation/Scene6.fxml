@@ -18,6 +18,11 @@
       <Button focusTraversable="false" layoutX="29.0" layoutY="514.0" mnemonicParsing="false" onMouseClicked="#mouseClicked" text="Inventory" />
       <ListView fx:id="ListView" layoutX="449.0" layoutY="396.0" prefHeight="164.0" prefWidth="161.0" visible="false" />
       <Button fx:id="mapbutton" focusTraversable="false" layoutX="122.0" layoutY="514.0" mnemonicParsing="false" onMouseClicked="#mouseClickedMap" text="Map" />
+      <ImageView fx:id="papir" fitHeight="44.0" fitWidth="52.0" layoutX="401.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Pictures_and_css/papirv3.png" />
+         </image>
+      </ImageView>
       <Button fx:id="dropButton" focusTraversable="false" layoutX="506.0" layoutY="520.0" mnemonicParsing="false" onMouseClicked="#removeItem" text="DROP" visible="false" />
       <TextArea fx:id="textbox" focusTraversable="false" layoutX="238.0" layoutY="87.0" prefHeight="54.0" prefWidth="162.0" visible="false" />
       <ImageView fx:id="mapImageView" fitHeight="248.0" fitWidth="305.0" layoutX="249.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" visible="false">

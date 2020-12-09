@@ -42,6 +42,6 @@
             <Image url="@../Pictures_and_css/springprotection.png" />
          </image>
       </ImageView>
-      <TextArea fx:id="nobuild" focusTraversable="false" layoutX="344.0" layoutY="213.0" prefHeight="26.0" prefWidth="183.0" text="You need more items!" visible="false" />
+      <TextArea fx:id="nobuild" focusTraversable="false" layoutX="264.0" layoutY="191.0" prefHeight="60.0" prefWidth="263.0" text="You can't build the spring.&#10;You are missing some of the items." visible="false" />
    </children>
 </AnchorPane>

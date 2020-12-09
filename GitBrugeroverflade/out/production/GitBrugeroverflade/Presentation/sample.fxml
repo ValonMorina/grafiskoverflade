@@ -26,7 +26,7 @@
           <MenuItem fx:id="inspectbutton" mnemonicParsing="false" onAction="#handler" text="Inspect" />
         </items>
       </MenuButton>
-      <TextArea fx:id="textbox" focusTraversable="false" layoutX="160.0" layoutY="413.0" prefHeight="38.0" prefWidth="193.0" visible="false" />
+      <TextArea fx:id="textbox" focusTraversable="false" layoutX="160.0" layoutY="413.0" prefHeight="50.0" prefWidth="410.0" visible="false" />
       <ImageView fx:id="character" fitHeight="50.0" fitWidth="182.0" focusTraversable="true" layoutX="188.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/redcharacterr.png" />
