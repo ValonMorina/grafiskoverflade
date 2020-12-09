@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="pane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="397.0" prefWidth="600.0" stylesheets="@../Pictures_and_css/Quarry.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.Scene7Controller">
    <children>
-      <Text fill="WHITE" layoutX="240.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUARRY" textAlignment="CENTER">
-         <font>
-            <Font name="Arial" size="28.0" />
-         </font>
-      </Text>
       <ImageView fx:id="character" fitHeight="63.0" fitWidth="60.0" focusTraversable="true" layoutX="508.0" layoutY="182.0" onKeyPressed="#keyPressed" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/redcharacterr.png" />
          </image>
       </ImageView>
+      <Button focusTraversable="false" layoutX="41.0" layoutY="511.0" mnemonicParsing="false" onMouseClicked="#mouseClicked" text="Inventory" />
+      <ListView fx:id="ListView" layoutX="459.0" layoutY="406.0" prefHeight="164.0" prefWidth="161.0" visible="false" />
+      <Button fx:id="mapbutton" focusTraversable="false" layoutX="132.0" layoutY="511.0" mnemonicParsing="false" onMouseClicked="#mouseClickedMap" text="Map" />
+      <Button fx:id="dropButton" focusTraversable="false" layoutX="516.0" layoutY="511.0" mnemonicParsing="false" onMouseClicked="#removeItem" text="DROP" visible="false" />
+      <TextArea fx:id="textbox" focusTraversable="false" layoutX="248.0" layoutY="97.0" prefHeight="54.0" prefWidth="162.0" visible="false" />
+      <ImageView fx:id="mapImageView" fitHeight="248.0" fitWidth="305.0" layoutX="259.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Pictures_and_css/map.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="259.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="140.5367431640625" />
    </children>
 </AnchorPane>
