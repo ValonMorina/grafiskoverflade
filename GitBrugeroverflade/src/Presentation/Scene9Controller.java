@@ -2,6 +2,8 @@ package Presentation;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
@@ -17,11 +20,16 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class Scene9Controller implements Initializable {
-    public MenuButton menuButton2;
+public class Scene9Controller implements Initializable, IController {
+    public javafx.scene.control.ListView ListView;
     public MenuItem talkButton;
-    public MenuItem buildbutton;
+    public MenuItem buildButton;
     public TextArea textbox;
+    public MenuButton menuButton;
+    public ImageView mapImageView;
+    public ImageView jeniffer;
+    public Button dropButton;
+    public Button mapbutton;
 
     @FXML
     private AnchorPane pane;
@@ -36,7 +44,8 @@ public class Scene9Controller implements Initializable {
     private Label label;
 
     @FXML
-    private Button nailbutton;
+    private Button btnRemove;
+    private ObservableList<String> itemsInventory;
 
 
     @FXML
@@ -67,7 +76,7 @@ public class Scene9Controller implements Initializable {
 
             case ENTER:
                 if (character.getX() >= 485 && character.getX() < 520) {
-                    menuButton2.fire();
+                    menuButton.fire();
                 }
                 break;
             default:
@@ -79,10 +88,25 @@ public class Scene9Controller implements Initializable {
         System.out.println("X-værdi: " + character.getX());
         System.out.println("Y værdi: " + character.getY());
     }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        pane.setFocusTraversable(true);
+        itemsInventory = FXCollections.observableArrayList();
+        itemsInventory.addAll(Main.game.getInventory());
+        ListView.setItems(itemsInventory);
+    }
 
+    @Override
+    public void mouseClicked(MouseEvent mouseEvent) {
+
+        if (!ListView.isVisible()) {
+            ListView.setVisible(true);
+            dropButton.setVisible(true);
+
+        } else if (ListView.isVisible()) {
+            ListView.setVisible(false);
+            dropButton.setVisible(false);
+        }
     }
 
     public void handler(ActionEvent actionEvent) {
@@ -96,7 +120,30 @@ public class Scene9Controller implements Initializable {
             KeyFrame keyframe = new KeyFrame(Duration.seconds(15), actionEvent1 -> textbox.setVisible(false)); // With Lambda you can use methods as arguments
             Timeline timeline = new Timeline(keyframe);
             timeline.play();
+        } else if (actionEvent.getSource() == buildButton) {
+            if(itemsInventory.contains("pickaxe") && itemsInventory.contains("pipes")) {
+                jeniffer.setVisible(false);
+            }
         }
     }
-}
+
+    @Override
+    public void mouseClickedMap(MouseEvent mouseEvent) {
+        if (!mapImageView.isVisible()) {
+            mapImageView.setVisible(true);
+
+        } else if (mapImageView.isVisible()) {
+            mapImageView.setVisible(false);
+        }
+    }
+
+    @Override
+    public void removeItem(MouseEvent mouseEvent) {
+        String item = (String) ListView.getSelectionModel().getSelectedItem();
+        Main.game.removeInventory(item);
+        itemsInventory.remove(item);
+        }
+
+    }
+
 
