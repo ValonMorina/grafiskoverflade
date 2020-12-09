@@ -15,6 +15,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -30,6 +31,8 @@ public class Scene9Controller implements Initializable, IController {
     public ImageView jeniffer;
     public Button dropButton;
     public Button mapbutton;
+    public ImageView springprotection;
+    public TextArea nobuild;
 
     @FXML
     private AnchorPane pane;
@@ -122,7 +125,10 @@ public class Scene9Controller implements Initializable, IController {
             timeline.play();
         } else if (actionEvent.getSource() == buildButton) {
             if(itemsInventory.contains("pickaxe") && itemsInventory.contains("pipes")) {
-                jeniffer.setVisible(false);
+                springprotection.setVisible(true);
+
+            } else {
+                nobuild.setVisible(true);
             }
         }
     }

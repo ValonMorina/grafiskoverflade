@@ -37,5 +37,11 @@
             <Image url="@../Pictures_and_css/map.png" />
          </image>
       </ImageView>
+      <ImageView fx:id="springprotection" fitHeight="191.0" fitWidth="423.0" layoutX="192.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Pictures_and_css/springprotection.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="nobuild" focusTraversable="false" layoutX="344.0" layoutY="213.0" prefHeight="26.0" prefWidth="183.0" text="You need more items!" visible="false" />
    </children>
 </AnchorPane>
