@@ -53,7 +53,7 @@ public class Scene8Controller implements IController, Initializable {
         switch (event.getCode()) {
             case RIGHT:
                 character.setX(character.getX()+10);
-                if(character.getX()>20) {
+                if(character.getX()>290) {
                     Main.setRoot("scene9");
                 }
                 break;
