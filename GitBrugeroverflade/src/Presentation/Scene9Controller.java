@@ -124,7 +124,7 @@ public class Scene9Controller implements Initializable, IController {
             Timeline timeline = new Timeline(keyframe);
             timeline.play();
         } else if (actionEvent.getSource() == buildButton) {
-            if(itemsInventory.contains("pickaxe") && itemsInventory.contains("pipes")) {
+            if(itemsInventory.contains("pickaxe") && itemsInventory.contains("pipes") && itemsInventory.contains("wood")) {
                 springprotection.setVisible(true);
 
             } else {

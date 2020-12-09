@@ -84,7 +84,7 @@ public class Scene4Controller implements IController, Initializable
                 break;
 
             case ENTER:
-                if (character.getX() < -250 && character.getX() > -290 && character.getY()==-130 && !itemsInventory.contains("pipes")) {
+                if (character.getX() < -210 && character.getX() > -310 && character.getY()<-130 && !itemsInventory.contains("pipes")) {
                     menuButton.fire();
                 }
 
@@ -124,7 +124,7 @@ public class Scene4Controller implements IController, Initializable
     public void handler(ActionEvent actionEvent) {
         if (actionEvent.getSource() == inspectbutton) {
             textbox.setVisible(true);
-            textbox.setText("This is pipes");
+            textbox.setText("This is a pipe. You will need this, if you want to build spring protection.");
             KeyFrame keyframe = new KeyFrame(Duration.seconds(3), actionEvent1 -> textbox.setVisible(false)); // With Lambda you can use methods as arguments
             Timeline timeline = new Timeline(keyframe);
             timeline.play();
