@@ -34,6 +34,11 @@
         </items>
       </MenuButton>
       <TextArea fx:id="textbox" focusTraversable="false" layoutX="160.0" layoutY="413.0" prefHeight="38.0" prefWidth="193.0" visible="false" />
+      <ImageView fitHeight="68.0" fitWidth="29.0" layoutX="300.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures_and_css/mrmeeseeks.png" />
+         </image>
+      </ImageView>
       <ImageView fx:id="character" fitHeight="50.0" fitWidth="182.0" focusTraversable="true" layoutX="188.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/redcharacterr.png" />
@@ -44,5 +49,11 @@
             <Image url="@../Pictures_and_css/map.png" />
          </image>
       </ImageView>
+      <MenuButton fx:id="menuButton2" layoutX="280.0" layoutY="400.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="69.0" visible="false">
+        <items>
+          <MenuItem fx:id="talkButton" mnemonicParsing="false" onAction="#handler" text="Talk" />
+        </items>
+      </MenuButton>
+      <TextArea fx:id="textBox2" focusTraversable="false" layoutX="170.0" layoutY="423.0" prefHeight="38.0" prefWidth="193.0" visible="false" />
    </children>
 </AnchorPane>

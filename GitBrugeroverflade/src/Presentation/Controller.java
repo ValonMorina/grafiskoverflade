@@ -34,6 +34,9 @@ public class Controller implements Initializable {
     public ImageView mapImageView;
     public ImageView pickaxe;
     public Button dropButton;
+    public MenuItem talkButton;
+    public MenuButton menuButton2;
+    public TextArea textbox2;
 
     @FXML
     private AnchorPane pane;
@@ -92,6 +95,9 @@ public class Controller implements Initializable {
                 if (character.getX() >= 200 && character.getX() < 280 && !itemsInventory.contains("pickaxe")) {
                     menuButton.fire();
                 }
+                else if (character.getX() >= 100 && character.getX() < 180){
+                    menuButton2.fire();
+                }
                 break;
 
             default:
@@ -140,6 +146,14 @@ public class Controller implements Initializable {
             pickaxe.setVisible(false);
 
 
+        }
+
+        else if(actionEvent.getSource() == talkButton) {
+            textbox2.setVisible(true);
+            textbox2.setText("Hey Bitch ass");
+            KeyFrame keyframe = new KeyFrame(Duration.seconds(15), actionEvent1 -> textbox2.setVisible(false)); // With Lambda you can use methods as arguments
+            Timeline timeline = new Timeline(keyframe);
+            timeline.play();
         }
     }
 
