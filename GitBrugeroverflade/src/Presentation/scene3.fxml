@@ -4,9 +4,16 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="pane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.Scene3Controller">
     <children>
+      <Text fill="WHITE" layoutX="243.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FOREST" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="28.0" />
+         </font>
+      </Text>
       <ImageView fx:id="character" fitHeight="54.0" fitWidth="42.0" focusTraversable="true" layoutX="359.0" layoutY="482.0" onKeyPressed="#keyPressed" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/redcharacterr.png" />
