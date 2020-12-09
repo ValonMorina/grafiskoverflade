@@ -174,11 +174,11 @@ public class Controller implements Initializable {
 
     private void moveItem(String itemName) {
         //identify item
-        if (itemName == "pickaxe") {
+        if (itemName.equals("pickaxe")) {
 
             //check if item is in inventory
             for (String item: itemsInventory) {
-                if (item == "pickaxe") {
+                if (item.equals("pickaxe")) {
                     //move item to player location
                     // set item X to player X coordinate (-30 adds space between item and character)
                     pickaxe.setX(character.getX()-xCoordinateOffset-30);
@@ -189,7 +189,7 @@ public class Controller implements Initializable {
                     //move menu to pickaxe location
                     menuButton.setLayoutX(character.getX()+172);
                     menuButton.setLayoutY(character.getY()+310);
-                    
+
                     break;
                 }
             }
