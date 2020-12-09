@@ -135,7 +135,7 @@ public class Controller implements Initializable {
     public void handler(ActionEvent actionEvent) {
         if (actionEvent.getSource() == inspectbutton) {
             textbox.setVisible(true);
-            textbox.setText("This is a pickaxe");
+            textbox.setText("This is a pickaxe. You will need this, if you want to build spring protection.");
             KeyFrame keyframe = new KeyFrame(Duration.seconds(3), actionEvent1 -> textbox.setVisible(false)); // With Lambda you can use methods as arguments
             Timeline timeline = new Timeline(keyframe);
             timeline.play();

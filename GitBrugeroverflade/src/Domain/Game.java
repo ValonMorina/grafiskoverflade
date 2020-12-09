@@ -80,10 +80,11 @@ public class Game implements IGame{
 
         //User inventory
         //here objects are created and added to the inventory, these will be in inventory from the start of the game
+        /*
         inventory.add(new Item("hammer"));
         inventory.add(new Item("shovel"));
         inventory.add(new Item("bucket"));
-
+        */
 
         //Room inventory, sets items in the rooms, these can be picked up by the user
         forest.setRoomItem(new Item("wood"));
