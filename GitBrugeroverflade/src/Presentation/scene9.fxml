@@ -22,7 +22,7 @@
           <MenuItem fx:id="buildButton" mnemonicParsing="false" text="Build" />
         </items>
       </MenuButton>
-      <TextArea fx:id="textbox" layoutX="201.0" layoutY="406.0" prefHeight="43.0" prefWidth="198.0" visible="false" />
+      <TextArea fx:id="textbox" focusTraversable="false" layoutX="67.0" layoutY="38.0" prefHeight="91.0" prefWidth="496.0" visible="false" />
       <ImageView fitHeight="68.0" fitWidth="62.0" layoutX="507.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/Jennifer2.png" />

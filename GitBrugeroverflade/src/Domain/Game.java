@@ -3,7 +3,7 @@ package Domain;
 
 import java.util.ArrayList;
 
-public class Game {
+public class Game implements IGame{
     //Data fields
     private Parser parser;
     private Room currentRoom;
@@ -15,6 +15,7 @@ public class Game {
     //This ArrayList contains the users items, picked up items will be stored here
     ArrayList<Item> inventory = new ArrayList<Item>();
 
+    ArrayList <String> guiList = new ArrayList<>();
 
     //Creates object Score to track user's points
     Points score = new Points();
@@ -86,11 +87,11 @@ public class Game {
 
         //Room inventory, sets items in the rooms, these can be picked up by the user
         forest.setRoomItem(new Item("wood"));
-        quarry.setRoomItem(new Item("pickaxe"));
+        quarry.setRoomItem(new Item("pickaxe"));    //done
         quarry.setRoomItem(new Item("rocks"));
         quarry.setRoomItem(new Item("iron"));
         quarry.setRoomItem(new Item("concrete"));
-        village.setRoomItem(new Item("paper"));
+        village.setRoomItem(new Item("paper"));      //done
         townSquare.setRoomItem(new Item("nail"));
         brimhavenTown.setRoomItem(new Item("pens"));
         brimhavenTown.setRoomItem(new Item("pipes"));
@@ -430,5 +431,39 @@ public class Game {
                 break;
 
         }
+    }
+
+
+    @Override
+    public void addInventory(String name) {
+        if(!inventory.contains(name)){
+            Item item = new Item(name);
+            inventory.add(item);
+        }
+
+
+    }
+
+    @Override
+    public void removeInventory(String name) {
+       for(int i = 0; i<inventory.size(); i++){
+           if(inventory.get(i).description.contains(name)){
+               inventory.remove(inventory.get(i));
+           }
+       }
+
+    }
+
+    @Override
+    public ArrayList<String> getInventory() {
+        if(!(inventory == null)){
+            guiList= new ArrayList<>();
+            for(Item item : inventory){
+                guiList.add(item.description);
+
+            } return guiList;
+        }
+        else return null;
+
     }
 }

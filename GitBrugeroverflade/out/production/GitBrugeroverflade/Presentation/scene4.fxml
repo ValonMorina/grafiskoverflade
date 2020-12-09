@@ -1,21 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="pane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="550.0" prefWidth="600.0" stylesheets="@../Pictures_and_css/brimhaventownv1.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.Scene4Controller">
    <children>
-      <Text fill="WHITE" layoutX="170.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BRIMHAVEN TOWN" textAlignment="CENTER">
-         <font>
-            <Font name="Arial" size="28.0" />
-         </font>
-      </Text>
+      <Button focusTraversable="false" layoutX="14.0" layoutY="505.0" mnemonicParsing="false" onMouseClicked="#mouseClicked" text="Inventory" />
+      <ListView fx:id="ListView" layoutX="420.0" layoutY="378.0" prefHeight="172.0" prefWidth="180.0" visible="false" />
+      <Button fx:id="mapbutton" focusTraversable="false" layoutX="97.0" layoutY="505.0" mnemonicParsing="false" onMouseClicked="#mouseClickedMap" prefHeight="25.0" prefWidth="46.0" text="Map" />
+      <ImageView fx:id="pipes" fitHeight="83.0" fitWidth="113.0" layoutX="248.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Pictures_and_css/pipes.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="dropButton" focusTraversable="false" layoutX="486.0" layoutY="505.0" mnemonicParsing="false" onMouseClicked="#removeItem" text="DROP" visible="false" />
+      <MenuButton fx:id="menuButton" focusTraversable="false" layoutX="251.0" layoutY="275.0" mnemonicParsing="false" text="MenuButton" visible="false">
+        <items>
+          <MenuItem fx:id="takebutton" mnemonicParsing="false" onAction="#handler" text="Take" />
+          <MenuItem fx:id="inspectbutton" mnemonicParsing="false" onAction="#handler" text="Inspect" />
+        </items>
+      </MenuButton>
       <ImageView fx:id="character" fitHeight="50.0" fitWidth="182.0" focusTraversable="true" layoutX="547.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/redcharacterr.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mapImageView" fitHeight="241.0" fitWidth="327.0" layoutX="236.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Pictures_and_css/map.png" />
          </image>
       </ImageView>
    </children>

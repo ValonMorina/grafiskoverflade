@@ -1,13 +1,15 @@
 package Domain;
 
+import java.util.ArrayList;
+
 public interface IGame {
 
-    public void takeItem();
+    public void addInventory(String name);
+    public void removeInventory(String name);
+    public ArrayList<String> getInventory();
 
 
-    public void setRoomItem(Item newItem);
-
-    }
+}
 
 
 
