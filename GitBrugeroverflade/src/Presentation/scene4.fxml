@@ -4,6 +4,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,9 +14,9 @@
       <Button focusTraversable="false" layoutX="14.0" layoutY="505.0" mnemonicParsing="false" onMouseClicked="#mouseClicked" text="Inventory" />
       <ListView fx:id="ListView" layoutX="420.0" layoutY="378.0" prefHeight="172.0" prefWidth="180.0" visible="false" />
       <Button fx:id="mapbutton" focusTraversable="false" layoutX="97.0" layoutY="505.0" mnemonicParsing="false" onMouseClicked="#mouseClickedMap" prefHeight="25.0" prefWidth="46.0" text="Map" />
-      <ImageView fx:id="pipes" fitHeight="83.0" fitWidth="113.0" layoutX="248.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="pipes" fitHeight="83.0" fitWidth="98.0" layoutX="254.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Pictures_and_css/pipes.png" />
+            <Image url="@../Pictures_and_css/pipesv2.png" />
          </image>
       </ImageView>
       <Button fx:id="dropButton" focusTraversable="false" layoutX="486.0" layoutY="505.0" mnemonicParsing="false" onMouseClicked="#removeItem" text="DROP" visible="false" />
@@ -35,5 +36,6 @@
             <Image url="@../Pictures_and_css/map.png" />
          </image>
       </ImageView>
+      <TextArea fx:id="textbox" focusTraversable="false" layoutX="143.0" layoutY="212.0" prefHeight="43.0" prefWidth="180.0" visible="false" />
    </children>
 </AnchorPane>
