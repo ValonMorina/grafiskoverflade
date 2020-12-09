@@ -50,7 +50,7 @@ public class Controller implements Initializable {
     //The distance the character moves when an arrow-key is pressed to move
     int moveCharacterDistance = 20;
 
-    //Variable to cotain users points for completing build quest.
+    //Variable to contain users points for completing build quest.
     Points questScore = new Points();
 
 
