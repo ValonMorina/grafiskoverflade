@@ -92,16 +92,20 @@ public class Controller implements Initializable {
                 break;
 
             case ENTER:
-                //check if character X coordinate is close to pickaxe Y coordinate
-                if (character.getX() >= pickaxe.getX()+xCoordinateOffset-30 && character.getX() <= pickaxe.getX()+xCoordinateOffset+30){
+                //check to see if item is already in inventory
+                if (!itemsInventory.contains("pickaxe")) {
+                    //check if character X coordinate is close to pickaxe Y coordinate
+                    if (character.getX() >= pickaxe.getX() + xCoordinateOffset-30 && character.getX() <= pickaxe.getX()+xCoordinateOffset+30){
 
-                    //check if character Y coordinate is close to pickaxe Y coordinate
-                    if (character.getY() >= pickaxe.getY() - 80 && character.getY() <= pickaxe.getY() + 10) {
+                        //check if character Y coordinate is close to pickaxe Y coordinate
+                        if (character.getY() >= pickaxe.getY() - yCoordinateOffset - 30 && character.getY() <= pickaxe.getY() + yCoordinateOffset - 30) {
 
-                        //opens menu when character is close enough to item
-                        menuButton.fire();
+                            //opens menu when character is close enough to item
+                            menuButton.fire();
+                        }
                     }
                 }
+
 
 
 
@@ -186,11 +190,11 @@ public class Controller implements Initializable {
 
                     //move item to player location
                     // set item X to player X coordinate (-30 adds space between item and character)
-                    //TODO change 200 to variable xCoordinateOffset
-                    pickaxe.setX(character.getX()-200-30);
+                    pickaxe.setX(character.getX()-xCoordinateOffset-30);
+
                     // set item Y to player Y coordinate
-                    //TODO change 40 to variable yCoordinateOffset
-                    pickaxe.setY(character.getY()+40);
+                    pickaxe.setY(character.getY()+yCoordinateOffset);
+
                     //move menu to pickaxe location
                     menuButton.setLayoutX(character.getX()+172);
                     menuButton.setLayoutY(character.getY()+310);
