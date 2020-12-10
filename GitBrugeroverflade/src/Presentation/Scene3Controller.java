@@ -93,6 +93,9 @@ public class Scene3Controller implements IController, Initializable
         itemsInventory = FXCollections.observableArrayList();
         itemsInventory.addAll(Main.game.getInventory());
         ListView.setItems(itemsInventory);
+        if (itemsInventory.contains("wood")) {
+            wood.setVisible(false);
+        }
     }
 
     @Override
@@ -112,8 +115,8 @@ public class Scene3Controller implements IController, Initializable
     public void handler(ActionEvent actionEvent) {
         if (actionEvent.getSource() == inspectbutton) {
             textbox.setVisible(true);
-            textbox.setText("This is wood");
-            KeyFrame keyframe = new KeyFrame(Duration.seconds(3), actionEvent1 -> textbox.setVisible(false)); // With Lambda you can use methods as arguments
+            textbox.setText("This is wood. You will need this if you want to build spring protection!");
+            KeyFrame keyframe = new KeyFrame(Duration.seconds(7), actionEvent1 -> textbox.setVisible(false)); // With Lambda you can use methods as arguments
             Timeline timeline = new Timeline(keyframe);
             timeline.play();
 

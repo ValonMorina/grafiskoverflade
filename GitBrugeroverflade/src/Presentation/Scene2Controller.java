@@ -99,6 +99,9 @@ public class Scene2Controller implements IController, Initializable {
         itemsInventory = FXCollections.observableArrayList();
         itemsInventory.addAll(Main.game.getInventory());
         ListView.setItems(itemsInventory);
+        if (itemsInventory.contains("papir")) {
+            papir.setVisible(false);
+        }
     }
 
     @Override
@@ -118,8 +121,8 @@ public class Scene2Controller implements IController, Initializable {
     public void handler(ActionEvent actionEvent) {
         if (actionEvent.getSource() == inspectbutton) {
             textbox.setVisible(true);
-            textbox.setText("This is paper");
-            KeyFrame keyframe = new KeyFrame(Duration.seconds(3), actionEvent1 -> textbox.setVisible(false)); // With Lambda you can use methods as arguments
+            textbox.setText("This is paper. You will need this if you want to build a poster about sanitation.");
+            KeyFrame keyframe = new KeyFrame(Duration.seconds(7), actionEvent1 -> textbox.setVisible(false)); // With Lambda you can use methods as arguments
             Timeline timeline = new Timeline(keyframe);
             timeline.play();
 
@@ -127,8 +130,6 @@ public class Scene2Controller implements IController, Initializable {
             Main.game.addInventory("papir");
             itemsInventory.add("papir");
             papir.setVisible(false);
-
-
         }
     }
     @Override

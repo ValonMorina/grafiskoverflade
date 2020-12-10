@@ -60,14 +60,14 @@ public class Scene8Controller implements IController, Initializable {
 
             case LEFT:
                 character.setX(character.getX()-10);
-                if(character.getX()<-570) {
+                if(character.getX()<-310) {
                     Main.setRoot("scene7");
                 }
                 break;
 
             case UP:
                 character.setY(character.getY()-10);
-                if(character.getY()<-30) {
+                if(character.getY()<-300) {
                     Main.setRoot("sample");
                 }
 
