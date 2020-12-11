@@ -1,19 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="600.0" stylesheets="@../Pictures_and_css/TownSquare.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.Controller">
+<AnchorPane fx:id="pane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.Scene5Controller">
+   <stylesheets>
+      <URL value="@../Pictures_and_css/Village.css" />
+      <URL value="@../Pictures_and_css/Village.css" />
+      <URL value="@../Pictures_and_css/Village.css" />
+   </stylesheets>
    <children>
-      <ImageView fx:id="character" fitHeight="50.0" fitWidth="182.0" layoutX="289.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+      <TextArea fx:id="textbox" focusTraversable="false" layoutX="238.0" layoutY="87.0" prefHeight="54.0" prefWidth="162.0" visible="false" />
+      <ImageView fx:id="character" fitHeight="54.0" fitWidth="42.0" focusTraversable="true" layoutX="45.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/redcharacterr.png" />
          </image>
       </ImageView>
-      <Button fx:id="button" layoutX="557.0" layoutY="1.0" mnemonicParsing="false" onKeyPressed="#keyPressed" prefHeight="27.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
-      <Label fx:id="label" layoutX="105.0" layoutY="37.0" text="Label" />
+      <ImageView fx:id="mapImageView" fitHeight="248.0" fitWidth="305.0" layoutX="249.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Pictures_and_css/map.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="249.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="140.5367431640625" />
+      <Button focusTraversable="false" layoutX="33.0" layoutY="525.0" mnemonicParsing="false" onMouseClicked="#mouseClicked" text="Inventory" />
+      <ListView fx:id="ListView" layoutX="449.0" layoutY="396.0" prefHeight="164.0" prefWidth="161.0" visible="false" />
+      <Button fx:id="mapbutton" focusTraversable="false" layoutX="122.0" layoutY="525.0" mnemonicParsing="false" onMouseClicked="#mouseClickedMap" text="Map" />
+      <ImageView fx:id="papir" fitHeight="44.0" fitWidth="52.0" layoutX="401.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Pictures_and_css/papirv3.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="dropButton" focusTraversable="false" layoutX="506.0" layoutY="520.0" mnemonicParsing="false" onMouseClicked="#removeItem" text="DROP" visible="false" />
+      <Text fill="WHITE" layoutX="262.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VILLAGE" textAlignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

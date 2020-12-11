@@ -11,9 +11,11 @@ import java.io.IOException;
 
 public class Main extends Application {
     private static Scene scene;
+    public static IGame game;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        game = new Game();
         scene = new Scene(loadFXML("sample"));
         primaryStage.setTitle("World of Zuul");
         primaryStage.setScene(scene);

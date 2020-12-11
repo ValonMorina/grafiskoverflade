@@ -3,7 +3,7 @@ package Domain;
 
 import java.util.ArrayList;
 
-public class Game {
+public class Game implements IGame{
     //Data fields
     private Parser parser;
     private Room currentRoom;
@@ -15,6 +15,7 @@ public class Game {
     //This ArrayList contains the users items, picked up items will be stored here
     ArrayList<Item> inventory = new ArrayList<Item>();
 
+    ArrayList <String> guiList = new ArrayList<>();
 
     //Creates object Score to track user's points
     Points score = new Points();
@@ -79,18 +80,19 @@ public class Game {
 
         //User inventory
         //here objects are created and added to the inventory, these will be in inventory from the start of the game
+        /*
         inventory.add(new Item("hammer"));
         inventory.add(new Item("shovel"));
         inventory.add(new Item("bucket"));
-
+        */
 
         //Room inventory, sets items in the rooms, these can be picked up by the user
         forest.setRoomItem(new Item("wood"));
-        quarry.setRoomItem(new Item("pickaxe"));
+        quarry.setRoomItem(new Item("pickaxe"));    //done
         quarry.setRoomItem(new Item("rocks"));
         quarry.setRoomItem(new Item("iron"));
         quarry.setRoomItem(new Item("concrete"));
-        village.setRoomItem(new Item("paper"));
+        village.setRoomItem(new Item("paper"));      //done
         townSquare.setRoomItem(new Item("nail"));
         brimhavenTown.setRoomItem(new Item("pens"));
         brimhavenTown.setRoomItem(new Item("pipes"));
@@ -151,7 +153,7 @@ public class Game {
         }
         //If commandWord is inventory the program executes the method printInventory()
         else if (commandWord == CommandWord.INVENTORY) {
-            printInventory();
+            printInventory(new Command(CommandWord.INVENTORY, "inventory"));
         }
         else if (commandWord == CommandWord.TAKE) {
             takeItem(command);
@@ -216,13 +218,13 @@ public class Game {
     }
 
     //This method is executed when commandWord inventory is written by user
-    private void printInventory() {
+    private void printInventory(Command inventory) {
         String output = ""; //these "" initializes the variable to be empty
         //Runs through the arrayList named inventory and prints every item in the list
-        for (int i = 0; i < inventory.size(); i++) {
+        for (int i = 0; i < this.inventory.size(); i++) {
             //checks inventory for the current value of i, if something is stored there it is added to the String
             //variable 'output' and using the getDescription() method it is turned into a String
-            output += inventory.get(i).getDescription() + " "; //" " at the end leaves a space between printed items
+            output += this.inventory.get(i).getDescription() + " "; //" " at the end leaves a space between printed items
         }
         System.out.println("Your inventory contains: ");
         //if statement checks if inventory is empty by checking whether or not the value of 'output' has been changed
@@ -264,6 +266,7 @@ public class Game {
             System.out.println("Drop what?");
             return;
         }
+
         //Stores second command word in a String named item
         String item = command.getSecondWord();
 
@@ -293,7 +296,14 @@ public class Game {
         }
     }
 
-    //Method talk prints messages to the user, the message depends on currentRoom
+    private void dropItemGui() {
+        dropItem(new Command(CommandWord.DROP,"drop"));
+    }
+
+
+
+
+        //Method talk prints messages to the user, the message depends on currentRoom
     private void talk() {
         if (currentRoom == townSquare)  {
             System.out.println("Hi welcome to the game!");
@@ -422,5 +432,39 @@ public class Game {
                 break;
 
         }
+    }
+
+
+    @Override
+    public void addInventory(String name) {
+        if(!inventory.contains(name)){
+            Item item = new Item(name);
+            inventory.add(item);
+        }
+
+
+    }
+
+    @Override
+    public void removeInventory(String name) {
+       for(int i = 0; i<inventory.size(); i++){
+           if(inventory.get(i).description.contains(name)){
+               inventory.remove(inventory.get(i));
+           }
+       }
+
+    }
+
+    @Override
+    public ArrayList<String> getInventory() {
+        if(!(inventory == null)){
+            guiList= new ArrayList<>();
+            for(Item item : inventory){
+                guiList.add(item.description);
+
+            } return guiList;
+        }
+        else return null;
+
     }
 }
