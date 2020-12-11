@@ -189,6 +189,8 @@ public class Controller implements Initializable {
         moveItem("pickaxe");
         itemsInventory.remove("pickaxe");
         pickaxe.setVisible(true);
+        Main.game.removeInventory("pickaxe");
+
     }
 
     private void moveItem(String itemName) {
