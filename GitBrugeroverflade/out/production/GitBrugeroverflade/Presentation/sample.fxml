@@ -8,17 +8,30 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="pane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#keyPressed" prefHeight="550.0" prefWidth="600.0" stylesheets="@../Pictures_and_css/TownSquare.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.Controller">
    <children>
+      <Text fill="WHITE" layoutX="196.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOWN SQUARE" textAlignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
       <Button focusTraversable="false" layoutX="14.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#mouseClicked" text="Inventory" />
       <ListView fx:id="ListView" layoutX="400.0" layoutY="350.0" prefHeight="200.0" prefWidth="200.0" visible="false" />
       <Button fx:id="mapbutton" focusTraversable="false" layoutX="93.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#mouseClickedMap" text="Map" />
       <ImageView fitHeight="75.0" fitWidth="32.0" layoutX="333.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Pictures_and_css/mrmeeseeks.png" />
+            <Image url="@../Pictures_and_css/npctownsquare.png" />
          </image>
       </ImageView>
+      <MenuButton fx:id="menuButton1" layoutX="311.0" layoutY="368.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="77.0" textAlignment="CENTER" visible="false">
+        <items>
+          <MenuItem fx:id="talkbutton" mnemonicParsing="false" onAction="#handler2" text="Talk" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
       <ImageView fx:id="pickaxe" fitHeight="50.0" fitWidth="40.0" layoutX="423.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/pickaxev4.png" />
@@ -32,6 +45,7 @@
         </items>
       </MenuButton>
       <TextArea fx:id="textbox" focusTraversable="false" layoutX="160.0" layoutY="413.0" prefHeight="50.0" prefWidth="410.0" visible="false" />
+      <TextArea fx:id="textbox1" focusTraversable="false" layoutX="50.0" layoutY="411.0" prefHeight="78.0" prefWidth="530.0" visible="false" />
       <ImageView fx:id="character" fitHeight="50.0" fitWidth="182.0" focusTraversable="true" layoutX="188.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Pictures_and_css/redcharacterr.png" />

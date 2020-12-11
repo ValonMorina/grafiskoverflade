@@ -16,7 +16,7 @@
     <children>
       <Text fill="WHITE" layoutX="243.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FOREST" textAlignment="CENTER">
          <font>
-            <Font name="Arial" size="28.0" />
+            <Font name="Arial" size="30.0" />
          </font>
       </Text>
       <ImageView fx:id="character" fitHeight="54.0" fitWidth="42.0" focusTraversable="true" layoutX="359.0" layoutY="482.0" onKeyPressed="#keyPressed" pickOnBounds="true" preserveRatio="true">

@@ -33,7 +33,9 @@ public class Controller implements Initializable {
     public ImageView mapImageView;
     public ImageView pickaxe;
     public Button dropButton;
-
+    public MenuButton menuButton1;
+    public TextArea textbox1;
+    public MenuItem talkbutton;
     @FXML
     private AnchorPane pane;
 
@@ -101,8 +103,12 @@ public class Controller implements Initializable {
 
                             //opens menu when character is close enough to item
                             menuButton.fire();
+
                         }
                     }
+                }
+                if (character.getX() >= 140 && character.getX() < 180) {
+                    menuButton1.fire();
                 }
 
                 break;
@@ -152,7 +158,20 @@ public class Controller implements Initializable {
             itemsInventory.add("pickaxe");
             pickaxe.setVisible(false);
 
+        }
+    }
 
+    public void handler2(ActionEvent actionEvent) {
+        if(actionEvent.getSource() == talkbutton) {
+            textbox1.setVisible(true);
+            textbox1.setText("Welcome to our little community!" +
+                    "\n We are struggling with our water supply, it isn't clean." +
+                    "\n We need your help supplying everyone with clean water and sanitation." +
+                    "\n Go talk to some of the people in the different areas to learn more about how you can help!"
+                    );
+            KeyFrame keyFrame = new KeyFrame(Duration.seconds(15),actionEvent1 -> textbox1.setVisible(false));
+            Timeline timeline = new Timeline(keyFrame);
+            timeline.play();
         }
     }
 
