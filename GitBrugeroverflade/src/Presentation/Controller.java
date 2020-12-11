@@ -41,8 +41,21 @@ public class Controller {
                 character.setX(character.getX()-10);
                 break;
 
+<<<<<<< Updated upstream
             case UP:
                 character.setY(character.getY()-10);
+=======
+            case UP:    //School
+                character.setY(character.getY() - moveCharacterDistance);
+                if (character.getY() < -330) {
+                    Main.setRoot("scene2");
+                }
+                //block house
+                if (character.getY() < -40 && character.getX() < 100 && character.getX() > 0) {
+                    character.setY(-40);
+                }
+                break;
+>>>>>>> Stashed changes
 
                 break;
 
