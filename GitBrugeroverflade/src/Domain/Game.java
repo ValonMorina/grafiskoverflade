@@ -13,7 +13,9 @@ public class Game implements IGame{
     Room townSquare, village, brimhavenTown, quarry, spring, forest, river, toilet, school;
 
     //This ArrayList contains the users items, picked up items will be stored here
-    ArrayList<Item> inventory = new ArrayList<Item>();
+
+
+    ArrayList<Item> inventory = new ArrayList<>();
 
     ArrayList <String> guiList = new ArrayList<>();
 

@@ -18,13 +18,13 @@
             <Font size="30.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="197.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use the arrow keys to move around" textAlignment="CENTER">
+      <Text layoutX="197.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use the arrow keys to move around" textAlignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="97.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use the ENTER key to interact with people and items (stand close to them!)" textAlignment="CENTER" />
-      <Text fill="WHITE" layoutX="83.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use the mouse to interact with the inventory, map and the drop option. Have fun!" />
+      <Text layoutX="97.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use the ENTER key to interact with people and items (stand close to them!)" textAlignment="CENTER" />
+      <Text layoutX="83.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use the mouse to interact with the inventory, map and the drop option. Have fun!" />
       <Button focusTraversable="false" layoutX="14.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#mouseClicked" text="Inventory" />
       <ListView fx:id="ListView" layoutX="400.0" layoutY="350.0" prefHeight="200.0" prefWidth="200.0" visible="false" />
       <Button fx:id="mapbutton" focusTraversable="false" layoutX="93.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#mouseClickedMap" text="Map" />

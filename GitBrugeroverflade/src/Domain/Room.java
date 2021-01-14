@@ -12,7 +12,7 @@ public class Room {
     private HashMap<String, Room> exits;
 
     //This is the ArrayList for the rooms, it stores items that can be found in the room
-    ArrayList<Item> roomItem = new ArrayList<Item>();
+    ArrayList<Item> roomItem = new ArrayList<>();
 
     //Constructor for room
     public Room(String description) {
